@@ -22,8 +22,22 @@ public class HotDog {
     * 
     */ 
    public long printMenu() {
-      double price = 0.99;
-
+        double price = 0.99;
+        for (int k = 0; k < 2; k++) {
+            for (int m = 0; m < 2; m++) {
+                for (int co = 0; co < 2; co++) {
+                    for (int tw = 0; tw < 2; tw++) {
+                        for (int sr = 0; sr < 2; sr++) {
+                            for (int sp = 0; sp < 2; sp++) {
+                                for (int s = 0; s < 2; s++) {
+                                    price = 0.99;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
    }
    
    public static void main( String [ ] args ) {
