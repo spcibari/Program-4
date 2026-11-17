@@ -17,58 +17,58 @@ public class HotDog {
     public static final double SAUERKRAUT = 0.45;
    /** 
     * Returns the number of combinations
-    * @param price price of a hot dog with or without toppings
     * @param itemCount the number of combinations in the menu
+    * @param price price of a hot dog with or without toppings
     * @return price of hot dog combinations, the number of combinations, and what's in the combiation
     * 
     */ 
    public long printMenu() {
         long itemCount = -1;
         double price = 0.99;
-        String menuItem = "HDog in Bun with";
-        for (int k = 0; k < 2; k++) {
-            for (int m = 0; m < 2; m++) {
-                for (int co = 0; co < 2; co++) {
-                    for (int tw = 0; tw < 2; tw++) {
-                        for (int sr = 0; sr < 2; sr++) {
-                            for (int sp = 0; sp < 2; sp++) {
-                                for (int s = 0; s < 2; s++) {
-                                    price = 0.99;
-                                    itemCount++;
+        String menuItem = "HDog in Bun with"; //sets the first statement of the menu item
+        for (int k = 0; k < 2; k++) { // checks for ketchup on hotdog
+            for (int m = 0; m < 2; m++) { // checks for mustard on hotdog
+                for (int co = 0; co < 2; co++) { // checks for chopped onions on hotdog
+                    for (int tw = 0; tw < 2; tw++) { // checks for tomato wedges on hotdog
+                        for (int sr = 0; sr < 2; sr++) { // checks for sweet relish on hotdog
+                            for (int sp = 0; sp < 2; sp++) { // checks for sport peppers on hotdog
+                                for (int s = 0; s < 2; s++) { // checks for sauerkraut on hotdog
+                                    price = 0.99; // sets base price to $0.99 until adding toppings
+                                    itemCount++; // increases the item count
                                     menuItem = "HDog in Bun with";
                                     if (k == 1){
-                                        price += KETCHUP;
+                                        price += KETCHUP; //sets price with ketchup
                                         menuItem = menuItem + " Ketchup,";
                                     }
                                     if (m == 1){
-                                        price += MUSTARD;
+                                        price += MUSTARD; //sets price with mustard
                                         menuItem = menuItem + " Mustard,";
                                     }
                                     if (co == 1){
-                                        price += CHOPPED_ONIONS;
+                                        price += CHOPPED_ONIONS; //sets price with chopped onions
                                         menuItem = menuItem + " Chopped Onions,";
                                     }
                                     if (tw == 1){
-                                        price += TOMATO_WEDGE;
+                                        price += TOMATO_WEDGE; //sets price with tomato wedges
                                         menuItem = menuItem + " Tomato Wedge,";
                                     }
                                     if (sr == 1){
-                                        price += SWEET_RELISH;
+                                        price += SWEET_RELISH; //sets price with sweet relish
                                         menuItem = menuItem + " Sweet Relish,";
                                     }
                                     if (sp == 1){
-                                        price += SPORT_PEPPER;
+                                        price += SPORT_PEPPER; //sets price with sport pepper
                                         menuItem = menuItem + " Sport Pepper,";
                                     }
                                     if (s == 1){
-                                        price += SAUERKRAUT;
+                                        price += SAUERKRAUT; ////sets price with sauerkraut
                                         menuItem = menuItem + " Sauerkraut,";
                                     }
                                     if (itemCount == 0) {
-                                        System.out.printf("0 HDog in Bun $%.2f \n", price);
+                                        System.out.printf("0 HDog in Bun $%.2f \n", price); //formatting for the first menu item
                                     }
                                     else { 
-                                        System.out.printf("%d %s $%.2f \n", itemCount, menuItem, price);
+                                        System.out.printf("%d %s $%.2f \n", itemCount, menuItem, price); //formating for all the rest of the menu items
                                     }
                                     
                                 }
@@ -78,7 +78,7 @@ public class HotDog {
                 }
             }
         }
-        return itemCount;
+        return itemCount; //returns long value to complete the method
    }
    
    public static void main( String [ ] args ) {
