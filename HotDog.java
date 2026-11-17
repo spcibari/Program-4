@@ -22,7 +22,9 @@ public class HotDog {
     * 
     */ 
    public long printMenu() {
+        long itemCount = -1;
         double price = 0.99;
+        String menuItem = "HDog in Bun with";
         for (int k = 0; k < 2; k++) {
             for (int m = 0; m < 2; m++) {
                 for (int co = 0; co < 2; co++) {
@@ -31,27 +33,42 @@ public class HotDog {
                             for (int sp = 0; sp < 2; sp++) {
                                 for (int s = 0; s < 2; s++) {
                                     price = 0.99;
+                                    itemCount++;
                                     if (k == 1){
                                         price += KETCHUP;
+                                        menuItem += " Ketchup,";
                                     }
                                     if (m == 1){
                                         price += MUSTARD;
+                                        menuItem += " Mustard,";
                                     }
                                     if (co == 1){
                                         price += CHOPPED_ONIONS;
+                                        menuItem += " Chopped Onions,";
                                     }
                                     if (tw == 1){
                                         price += TOMATO_WEDGE;
+                                        menuItem += " Tomato Wedge,";
                                     }
                                     if (sr == 1){
                                         price += SWEET_RELISH;
+                                        menuItem += " Sweet Relish,";
                                     }
                                     if (sp == 1){
                                         price += SPORT_PEPPER;
+                                        menuItem += " Sport Pepper,";
                                     }
                                     if (s == 1){
                                         price += SAUERKRAUT;
+                                        menuItem += " Sauerkraut,";
                                     }
+                                    if (itemCount == 0) {
+                                        System.out.println("HDog in Bun" + " " + price);
+                                    }
+                                    else { 
+                                        System.out.println(itemCount + " " + menuItem + " " + price);
+                                    }
+                                    
                                 }
                             }
                         }
@@ -59,6 +76,7 @@ public class HotDog {
                 }
             }
         }
+
    }
    
    public static void main( String [ ] args ) {
