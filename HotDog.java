@@ -31,6 +31,27 @@ public class HotDog {
                             for (int sp = 0; sp < 2; sp++) {
                                 for (int s = 0; s < 2; s++) {
                                     price = 0.99;
+                                    if (k == 1){
+                                        price += KETCHUP;
+                                    }
+                                    if (m == 1){
+                                        price += MUSTARD;
+                                    }
+                                    if (co == 1){
+                                        price += CHOPPED_ONIONS;
+                                    }
+                                    if (tw == 1){
+                                        price += TOMATO_WEDGE;
+                                    }
+                                    if (sr == 1){
+                                        price += SWEET_RELISH;
+                                    }
+                                    if (sp == 1){
+                                        price += SPORT_PEPPER;
+                                    }
+                                    if (s == 1){
+                                        price += SAUERKRAUT;
+                                    }
                                 }
                             }
                         }
