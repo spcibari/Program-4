@@ -18,7 +18,8 @@ public class HotDog {
    /** 
     * Returns the number of combinations
     * @param price price of a hot dog with or without toppings
-    * @return price of hot dog combinations
+    * @param itemCount the number of combinations in the menu
+    * @return price of hot dog combinations, the number of combinations, and what's in the combiation
     * 
     */ 
    public long printMenu() {
@@ -34,39 +35,40 @@ public class HotDog {
                                 for (int s = 0; s < 2; s++) {
                                     price = 0.99;
                                     itemCount++;
+                                    menuItem = "HDog in Bun with";
                                     if (k == 1){
                                         price += KETCHUP;
-                                        menuItem += " Ketchup,";
+                                        menuItem = menuItem + " Ketchup,";
                                     }
                                     if (m == 1){
                                         price += MUSTARD;
-                                        menuItem += " Mustard,";
+                                        menuItem = menuItem + " Mustard,";
                                     }
                                     if (co == 1){
                                         price += CHOPPED_ONIONS;
-                                        menuItem += " Chopped Onions,";
+                                        menuItem = menuItem + " Chopped Onions,";
                                     }
                                     if (tw == 1){
                                         price += TOMATO_WEDGE;
-                                        menuItem += " Tomato Wedge,";
+                                        menuItem = menuItem + " Tomato Wedge,";
                                     }
                                     if (sr == 1){
                                         price += SWEET_RELISH;
-                                        menuItem += " Sweet Relish,";
+                                        menuItem = menuItem + " Sweet Relish,";
                                     }
                                     if (sp == 1){
                                         price += SPORT_PEPPER;
-                                        menuItem += " Sport Pepper,";
+                                        menuItem = menuItem + " Sport Pepper,";
                                     }
                                     if (s == 1){
                                         price += SAUERKRAUT;
-                                        menuItem += " Sauerkraut,";
+                                        menuItem = menuItem + " Sauerkraut,";
                                     }
                                     if (itemCount == 0) {
-                                        System.out.println("HDog in Bun" + " " + price);
+                                        System.out.printf("0 HDog in Bun $%.2f \n", price);
                                     }
                                     else { 
-                                        System.out.println(itemCount + " " + menuItem + " " + price);
+                                        System.out.printf("%d %s $%.2f \n", itemCount, menuItem, price);
                                     }
                                     
                                 }
@@ -76,7 +78,7 @@ public class HotDog {
                 }
             }
         }
-
+        return itemCount;
    }
    
    public static void main( String [ ] args ) {
